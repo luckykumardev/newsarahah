@@ -1,0 +1,51 @@
+<%  include partials/header  %>
+
+<div class="container">
+
+
+<header class="jumbotron">
+
+<div class="container">
+<h1>  Welcome to varahah </h1>
+
+<a class="btn btn-primary btn-large" href='/Myprofile/new'> add new message</a>
+
+</div>
+</header>
+
+				
+
+
+<div class="row text-center" style="display:flex;  flex-wrap: wrap;">
+                        
+
+
+            <div class="well">
+                <hr>
+
+
+                      <% Messages.forEach(function(x){ %>
+
+                      <div class = "col-lg-12">
+
+
+                        <h4> <%=x.message %> </h4>
+                        <h3></h3>
+                        <a href="#">  <h4> <%=x.username %> </h4> </a>
+
+                       <p>
+
+                         <a href="/Myprofile/<%= x._id%>" class="btn btn-primary">reply</a>
+                       </p>
+                   
+                    </div>
+
+                    <% }); %>
+
+                   
+                   
+                   </div>
+
+            </div>
+
+<%  include partials/footer %>
